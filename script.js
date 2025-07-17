@@ -6,7 +6,8 @@ const LANG_MAP = {
   vi: '베트남어',
 };
 // API 설정 - proxy.py에서 가져온 설정
-const API_URL = 'https://guest-api.sktax.chat/v1/chat/completions';
+//const API_URL = 'https://guest-api.sktax.chat/v1/chat/completions';
+const API_URL = 'https://cors-anywhere.herokuapp.com/https://guest-api.sktax.chat/v1/chat/completions';
 const API_KEY = 'sktax-XyeKFrq67ZjS4EpsDlrHHXV8it';
 
 const inputText = document.getElementById('inputText');
