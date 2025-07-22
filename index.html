@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM 번역기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LLM 번역기</h1>
+            <p>AI 기반 다국어 번역 서비스</p>
+        </header>
+        <main class="translation-area">
+            <div class="input-section">
+                <div class="language-selector">
+                    <label for="sourceLanguage">입력 언어:</label>
+                    <select id="sourceLanguage" disabled>
+                        <option value="한국어">한국어</option>
+                    </select>
+                </div>
+                <div class="text-area-container">
+                    <textarea 
+                        id="sourceText" 
+                        placeholder="번역할 텍스트를 입력하세요..."
+                        rows="8"
+                    ></textarea>
+                    <div class="text-controls">
+                        <button id="clearSource" class="clear-btn">지우기</button>
+                        <span id="sourceCharCount" class="char-count">0자</span>
+                    </div>
+                </div>
+            </div>
+            <div class="translation-controls">
+                <button id="translateBtn" class="translate-btn">
+                    <span class="btn-text">번역하기</span>
+                    <div class="loading-spinner" id="loadingSpinner"></div>
+                </button>
+                <div class="language-buttons">
+                    <button class="lang-btn" data-lang="영어">🇺🇸 영어</button>
+                    <button class="lang-btn" data-lang="중국어">🇨🇳 중국어</button>
+                    <button class="lang-btn" data-lang="베트남어">🇻🇳 베트남어</button>
+                    <button class="lang-btn" data-lang="스페인어">🇪🇸 스페인어</button>
+                    <button class="lang-btn" data-lang="말레이시아어">🇲🇾 말레이시아어</button>
+                </div>
+            </div>
+            <div class="output-section">
+                <div class="language-selector">
+                    <label for="targetLanguage">번역 결과:</label>
+                    <select id="targetLanguage">
+                        <option value="영어">영어</option>
+                        <option value="중국어">중국어</option>
+                        <option value="베트남어">베트남어</option>
+                        <option value="스페인어">스페인어</option>
+                        <option value="말레이시아어">말레이시아어</option>
+                    </select>
+                </div>
+                <div class="text-area-container">
+                    <textarea 
+                        id="targetText" 
+                        placeholder="번역 결과가 여기에 표시됩니다..."
+                        rows="8"
+                        readonly
+                    ></textarea>
+                    <div class="text-controls">
+                        <button id="copyResult" class="copy-btn">복사</button>
+                        <span id="targetCharCount" class="char-count">0자</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="watermark">
+            a.x 4.0 번역 테스트
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
